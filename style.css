@@ -53,12 +53,29 @@
     }
   }
   
-  .blink_me {
-    animation: blinker 1s linear infinite;
-  }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
+  /* Set the size, colour, font properties for the blinking text */
+  .blinking {
+    animation: blinkingText 1s infinite;
+    font-family: futura;
+    font-style: italic;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-color: #fc030b;
+}
+
+/* Specifies the animation and transparency for the blinking text */
+@keyframes blinkingText {
+
+    0% {
+        opacity: 0;
     }
-  }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
